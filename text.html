@@ -1,26 +1,32 @@
 <html>
+    <body>
 
+<script>
+ 
+   var value=11;
+   var initvalue=22;
 
-<body>
-    <script>
-        function reduce(array, combine, start) {
-         let  current = start;
-            for (let  element of array) {
-                current = combine(current, element);
-            }
-            return current;
+function addition(){
+    var value=initvalue;
+    var a=0;
+    return function add(x){
+        value=value+x;
+        a++;
+        if(a==2){
+            console.log(value);
         }
-var data=[
-    {name:'网页导论编程',credit:3},
-    {name:'英语',credit:3},
-    {name:'计算机编程',credit:3}
-];
-        console.log(reduce(data,function(a,b){
-            return a+b.credit
-        },
-    0));
-// → 10
-    </script>
-</body>
 
+    };
+
+}
+
+var func=addition();
+
+func(33);
+func(44);
+
+
+        </script>
+
+    </body>
 </html>
