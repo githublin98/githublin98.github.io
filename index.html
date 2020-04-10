@@ -82,6 +82,30 @@ var data=[
 console.log(my.max(data));
 console.log(_.max(data,function(it){return it.credit}));
 
+
+<h1 id="header">Hello</h1>
+
+   var value=11;
+   var initvalue=22;
+
+function addition(){
+    var value=initvalue;
+    var a=0;
+    return function add(x){
+        value=value+x;
+        a++;
+        if(a==2){
+            console.log(value);
+        }
+
+    };
+
+}
+
+var func=addition();
+
+func(33);
+func(44);
 */
 </script>
 <div id="jssor_1" style="position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
