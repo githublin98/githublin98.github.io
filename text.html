@@ -1,30 +1,20 @@
 <html>
     <body>
-       
+        <ul>
+
+        </ul>
+        <script src="underscore.js"></script>
         <script src="jquery-3.4.1.js"></script>
 <script>
+ var data;
+$(function(){
+    $.get("./data.json",function(result){
+        console.log(result)
+        data=result;
+    });
+  
+})
 
- var value=11;
-   var initvalue=22;
-
-function addition(){
-    var value=initvalue;
-    var a=0;
-    return function add(x){
-        value=value+x;
-        a++;
-        if(a==2){
-            console.log(value);
-        }
-
-    };
-
-}
-
-var func=addition();
-
-func(33);
-func(44);
         </script>
 
     </body>
